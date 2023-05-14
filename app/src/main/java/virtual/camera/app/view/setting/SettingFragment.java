@@ -123,7 +123,7 @@ public class SettingFragment extends BaseFragment {
             if (!TextUtils.isEmpty(video_path_local)) {
                 new File(video_path_local).delete();
             }
-            String subfix = u.substring(u.lastIndexOf("."), u.length());
+            String subfix = u.substring(u.lastIndexOf("/"), u.length());
             String outPath = App.getContext().getFilesDir() + "/video" + subfix;
             fos = new FileOutputStream(outPath);
             is = getActivitySafe().getContentResolver().openInputStream(uri);
